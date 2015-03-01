@@ -1,6 +1,12 @@
 extends layout
 
 block content
-	h1 Hello Boulder!
-
-	age-slider
+	.content
+		form(method='post', action='/form-post')
+			paper-input(label='Title', name='title', maxlength='255')
+			paper-input(label='Name', name='Name', maxlength='255')
+			
+			
+				input(type='hidden', name='form_id', value='837299')
+				paper-button#saveForm.button_text(type='submit', name='submit', value='Submit')
+				<paper-button raised>button</paper-button>

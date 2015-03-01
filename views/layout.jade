@@ -1,10 +1,20 @@
 doctype html
 html(lang='en')
-  head
-    meta(charset="utf-8")
-    title Untitled
-    script(src='/webcomponentsjs/webcomponents.min.js')
-    link(rel='import', href='/elements/my-element.html')
-    link(rel='import', href='/elements/age-slider.html')
-  body
-    block content
+	head
+		meta(charset="utf-8" name="viewport" content="width=device-width")
+		title T2 app
+		link(rel='stylesheet', href='/styles/main.css')
+		link(rel='import', href='/imports.html')
+	body(unresolved fullbleed layout vertical)
+		core-header-panel(flex)
+			core-toolbar
+				core-icon-button(icon='menu')
+				div T2
+				paper-tabs#tabs(selected='all', self-end='')
+					paper-tab(name='all') All
+					paper-tab(name='favorites') Clients
+					paper-tab(name='favorites') Payments
+			block content
+
+			script(src='/webcomponentsjs/webcomponents.min.js')
+			script(src='scripts/main.js')
