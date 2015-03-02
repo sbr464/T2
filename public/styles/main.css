@@ -22,3 +22,11 @@ core-toolbar {
   user-select: none;
   text-transform: uppercase;
 }
+
+[main] {
+  background-color: #F9F9F9;
+}
+
+[drawer] {
+  background-color: #FFFFFF;
+}

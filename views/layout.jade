@@ -6,15 +6,21 @@ html(lang='en')
 		link(rel='stylesheet', href='/styles/main.css')
 		link(rel='import', href='/imports.html')
 	body(unresolved fullbleed layout vertical)
-		core-header-panel(flex)
-			core-toolbar
-				core-icon-button(icon='menu')
-				div T2
-				paper-tabs#tabs(selected='all', self-end='')
-					paper-tab(name='all') All
-					paper-tab(name='favorites') Clients
-					paper-tab(name='hello') Payments
-			block content
+		core-drawer-panel
+			core-header-panel(drawer)
+				core-toolbar Menu
+				core-menu
+					core-item(label='one')
+					core-item(label='two')
+			core-header-panel(main)
+				core-toolbar
+					core-icon-button(icon='menu' core-drawer-toggle)
+					div T2
+					paper-tabs#tabs(selected='all', self-end='')
+						paper-tab(name='all') All
+						paper-tab(name='favorites') Clients
+						paper-tab(name='hello') Payments
+				block content
 
-			script(src='/webcomponentsjs/webcomponents.min.js')
-			script(src='scripts/main.js')
+				script(src='/webcomponentsjs/webcomponents.min.js')
+				script(src='scripts/main.js')
