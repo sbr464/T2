@@ -30,3 +30,7 @@ core-toolbar {
 [drawer] {
   background-color: #FFFFFF;
 }
+
+.logodrawer {
+  width: 26px;
+}
